@@ -21,7 +21,7 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player = Player(x, y)
-    asteroidField = AsteroidField()
+    asteroid_field = AsteroidField()
 
     while(True):
         for event in pygame.event.get():

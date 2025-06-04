@@ -16,11 +16,11 @@ class Asteroid(CircleShape):
         self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
             return
-        launchMod = random.uniform(20,50)
-        launchVec1 = self.velocity.rotate(launchMod)
-        launchVec2 = self.velocity.rotate(-launchMod)
-        newRadius = self.radius - ASTEROID_MIN_RADIUS
-        newAsteroid1 = Asteroid(self.position.x, self.position.y, newRadius)
-        newAsteroid2 = Asteroid(self.position.x, self.position.y, newRadius)
-        newAsteroid1.velocity = launchVec1 * 1.2
-        newAsteroid2.velocity = launchVec2 * 1.2
+        launch_angle = random.uniform(20,50)
+        launch_vec_1 = self.velocity.rotate(launch_angle)
+        launch_vec_2 = self.velocity.rotate(-launch_angle)
+        new_radius = self.radius - ASTEROID_MIN_RADIUS
+        new_ast_1 = Asteroid(self.position.x, self.position.y, new_radius)
+        new_ast_2 = Asteroid(self.position.x, self.position.y, new_radius)
+        new_ast_1.velocity = launch_vec_1 * 1.2
+        new_ast_2.velocity = launch_vec_2 * 1.2
